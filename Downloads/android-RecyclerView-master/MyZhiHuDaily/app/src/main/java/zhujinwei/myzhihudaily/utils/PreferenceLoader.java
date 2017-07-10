@@ -27,8 +27,16 @@ public class PreferenceLoader {
         SharedPreferences.Editor editor = preferences.edit();
         editor.putBoolean(key, value);
     }
-    
+    public int getInt(String key){
 
+        return preferences.getInt(key,0);
+    }
+
+    public void saveInt(String key,int value){
+
+        SharedPreferences.Editor editor=preferences.edit();
+        editor.putInt(key,value);
+    }
 
 
 }
